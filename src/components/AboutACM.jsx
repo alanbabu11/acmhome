@@ -15,7 +15,7 @@ export default function AboutACM() {
           <img
             src="/images/image 9.png"
             alt="ACM Chapter Group Photo"
-            className="w-full max-w-[520px] rounded-lg shadow-[0_4px_32px_rgba(0,0,0,0.08)] max-[900px]:max-w-full"
+            className="size-65 w-full max-w-[520px] rounded-lg shadow-[0_4px_32px_rgba(0,0,0,0.08)] max-[900px]:max-w-full"
           />
         </div>
       </div>

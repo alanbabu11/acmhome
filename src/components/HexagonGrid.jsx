@@ -3,19 +3,19 @@ import React, { useState, useEffect } from 'react';
 const resolveImage = (file) => new URL(`./heximgs/${file}`, import.meta.url).href;
 
 const TEAM_MEMBERS = [
-  { id: 1, name: "Kavin Thangamani", role: "Chairperson", img: resolveImage('kavincol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 2, name: "Jasmine Ramola J", role: "Vice Chairperson", img: resolveImage('JasmineCol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 3, name: "Karston", role: "Secretary", img: resolveImage('karstoncol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 4, name: "Junaid", role: "Joint Secretary", img: resolveImage('noprofile.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 5, name: "Shobika D", role: "Research Head", img: resolveImage('shobikacol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 6, name: "Vidur Varshan", role: "Membership Chair", img: resolveImage('vidurcol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 7, name: "Ruth J", role: "Treasurer", img: resolveImage('ruthcol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 8, name: "Alan Babu K", role: "Technical Head", img: resolveImage('alanbabuCol.svg'), linkedInUrl: "https://linkedin.com" },
+  { id: 1, name: "Kavin Thangamani", role: "Chairperson", img: resolveImage('kavincol.svg'), linkedInUrl: "https://www.linkedin.com/in/kavinthangamani/" },
+  { id: 2, name: "Jasmine Ramola J", role: "Vice Chairperson", img: resolveImage('JasmineCol.svg'), linkedInUrl: "https://www.linkedin.com/in/jasmine-ramola-j/" },
+  { id: 3, name: "Karston", role: "Secretary", img: resolveImage('karstoncol.svg'), linkedInUrl: "https://www.linkedin.com/in/karston-valentino-b-n-7aa688313/" },
+  { id: 4, name: "Junaid", role: "Joint Secretary", img: resolveImage('noprofile.svg'), linkedInUrl: "https://www.linkedin.com/in/junaidabdulalim/" },
+  { id: 5, name: "Shobika D", role: "Research Head", img: resolveImage('shobikacol.svg'), linkedInUrl: "https://www.linkedin.com/in/shobika-dayanidhi/" },
+  { id: 6, name: "Vidur Varshan", role: "Membership Chair", img: resolveImage('vidurcol.svg'), linkedInUrl: "https://www.linkedin.com/in/vidur-varshan-332311298/" },
+  { id: 7, name: "Ruth J", role: "Treasurer", img: resolveImage('ruthcol.svg'), linkedInUrl: "https://www.linkedin.com/in/ruth--john/" },
+  { id: 8, name: "Alan Babu K", role: "Technical Head", img: resolveImage('alanbabuCol.svg'), linkedInUrl: "https://www.linkedin.com/in/alan-babu-48784632b/" },
   { id: 9, name: "Jefray ", role: "Design Head", img: resolveImage('noprofile.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 10, name: "Joshua Ryan", role: "Social Media Head", img: resolveImage('JoshuaRyanCol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 11, name: "Allen Joseph", role: "Project Head", img: resolveImage('AllenCol.svg'), linkedInUrl: "https://linkedin.com" },
+  { id: 10, name: "Joshua Ryan", role: "Social Media Head", img: resolveImage('JoshuaRyanCol.svg'), linkedInUrl: "https://www.linkedin.com/in/joshua-ryan-29272a349/" },
+  { id: 11, name: "Allen Joseph", role: "Project Head", img: resolveImage('AllenCol.svg'), linkedInUrl: "https://www.linkedin.com/in/allen-joseph-g/" },
   { id: 12, name: "Harini S", role: "Event Head", img: resolveImage('HariniCol.svg'), linkedInUrl: "https://linkedin.com" },
-  { id: 13, name: "Austin Jayaraj", role: "Web Master", img: resolveImage('AustinCol.svg'), linkedInUrl: "https://linkedin.com" },
+  { id: 13, name: "Austin Jayaraj", role: "Web Master", img: resolveImage('AustinCol.svg'), linkedInUrl: "https://www.linkedin.com/in/austin-jayaraj-a-087200329/" },
 ];
 
 const Hexagon = ({ member, isGhost, distance, side }) => {
@@ -59,7 +59,7 @@ const Hexagon = ({ member, isGhost, distance, side }) => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
       >
-        <div className="hexagon w-full h-full bg-[#eee] overflow-hidden cursor-[url('/cursor.svg'),auto] relative" style={hexStyle}>
+        <div className="hexagon w-full h-full bg-[#eee] overflow-hidden relative" style={hexStyle}>
           <img
             src={member.img}
             alt={member.name}
@@ -108,20 +108,20 @@ const Hexagon = ({ member, isGhost, distance, side }) => {
 export default function HexagonGrid() {
   // 4-5-4 Layout structure with multiple ghosts for background effect
   const rowConfigs = [
-    { ghostLeft: 2, count: 4, ghostRight: 2, start: 0 },
-    { ghostLeft: 2, count: 5, ghostRight: 2, start: 4 },
-    { ghostLeft: 2, count: 4, ghostRight: 2, start: 9 },
+    { ghostLeft: 1, count: 4, ghostRight: 1, start: 0 },
+    { ghostLeft: 1, count: 5, ghostRight: 1, start: 4 },
+    { ghostLeft: 1, count: 4, ghostRight: 1, start: 9 },
   ];
 
   return (
     <section className="team-section py-20 overflow-hidden">
-      <div className="container mx-6">
-        <div className="header-content text-left mb-16 max-w-[800px] px-5 sm:px-10 lg:px-20">
-          <h2 className="text-[2rem] font-extrabold mb-4 text-black leading-tight tracking-tight md:text-[2rem]">Driving Change, Leading the Charge</h2>
-          <p className="subtitle text-[#555] text-[1.1rem] leading-[1.6]">
-            Our leadership team is dedicated to creating opportunities, fostering growth, and inspiring the next generation of tech leaders. These are the changemakers who guide ACM St. Joseph's Chapter toward success and innovation.
-          </p>
-        </div>
+      <div className="header-content mx-21 mb-16 max-w-[800px] px-4">
+        <h2 className="text-[2rem] font-extrabold mb-4 text-black leading-tight tracking-tight md:text-[2rem]">Driving Change, Leading the Charge</h2>
+        <p className="subtitle text-[#555] text-[1.1rem] leading-[1.6]">
+          Our leadership team is dedicated to creating opportunities, fostering growth, and inspiring the next generation of tech leaders. These are the changemakers who guide ACM St. Joseph's Chapter toward success and innovation.
+        </p>
+      </div>
+      <div className="container mx-auto">
 
         <div className="hex-grid-container flex flex-col items-center mt-5">
           {rowConfigs.map((row, rowIndex) => (
