@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="footer-left max-w-[500px]">
           <h3 className="text-[2rem] font-bold mb-4 text-black">ACM Students Chapter</h3>
           <p className="text-[#a0a7b2] text-[1.05rem] leading-relaxed">
-            Founded in 2024, the ACM chapter at St. Joseph's College of Engineering handle and manages by Department of Computer Science and Engineering is dedicated to bridging the gap between students and the ever-evolving tech industry.
+            Founded in 2024, the ACM chapter at St. Joseph's College of Engineering handled and managed by the Department of Computer Science and Engineering, is dedicated to bridging the gap between students and the ever-evolving tech industry.
           </p>
         </div>
 
