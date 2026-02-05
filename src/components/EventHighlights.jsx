@@ -1,5 +1,11 @@
 import React from 'react';
 
+// Import images from assets
+import highlight1 from '../../images/highlights/img1.avif';
+import highlight2 from '../../images/highlights/2.avif';
+import highlight3 from '../../images/highlights/3.avif';
+import highlight4 from '../../images/highlights/img2.avif';
+
 export default function EventHighlights() {
     return (
         <section className="bg-white py-20 px-5 sm:px-10 lg:px-20 overflow-hidden" id="event-highlights">
@@ -43,22 +49,36 @@ export default function EventHighlights() {
                 {/* Bento Grid layout */}
                 <div className="flex flex-col md:flex-row gap-6 min-h-[500px]">
                     {/* Main Large Card */}
-                    <div className="flex-[2.4] relative rounded-[32px] overflow-hidden bg-[#eef2f7] group h-[300px] md:h-auto">
-                        <div className="w-full h-full bg-[#d3d3d3] transition-transform duration-700 group-hover:scale-105" />
-
-
+                    <div className="flex-[2.4] relative rounded-[32px] overflow-hidden bg-[#eef2f7] group h-[400px] md:h-auto">
+                        <img
+                            src={highlight1}
+                            alt="Event Highlight 1"
+                            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                        />
                     </div>
 
-                    {/* Side Cards Column */}
+                    {/* Side Cards Column - Adjusted for better visibility */}
                     <div className="flex-1 flex flex-col gap-6">
-                        <div className="h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
-                            <div className="w-full h-full bg-[#d1d1d1] transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex-1 min-h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
+                            <img
+                                src={highlight2}
+                                alt="Event Highlight 2"
+                                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                            />
                         </div>
-                        <div className="h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
-                            <div className="w-full h-full bg-[#d1d1d1] transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex-1 min-h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
+                            <img
+                                src={highlight3}
+                                alt="Event Highlight 3"
+                                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                            />
                         </div>
-                        <div className="h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
-                            <div className="w-full h-full bg-[#d1d1d1] transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex-1 min-h-[180px] rounded-[32px] overflow-hidden bg-[#eef2f7] group">
+                            <img
+                                src={highlight4}
+                                alt="Event Highlight 4"
+                                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                            />
                         </div>
                     </div>
                 </div>
