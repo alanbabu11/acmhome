@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
-html, body {
+@theme {
+  --font-inter: Inter, sans-serif;
+  --font-outfit: Outfit, sans-serif;
+
+  --color-acm-blue: #0085FF;
+  --color-acm-blue-dark: #0056A3;
+  --color-acm-red: #FA5252;
+  --color-acm-red-dark: #C1121F;
+}
+
+.text-secondary {
+  color: #666666;
+}
+
+html,
+body {
   cursor: url('/cursor.svg'), auto;
+  @apply text-black antialiased bg-white;
+  font-family: var(--font-inter);
 }

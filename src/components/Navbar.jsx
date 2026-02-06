@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import navLogo from '../../images/logo.svg';
 import footer4 from '../assets/logos/footer-4.png';
 import footer5 from '../assets/logos/footer-5.png';
@@ -46,11 +47,11 @@ export default function Navbar() {
         </button>
 
         <ul className={`flex gap-10 items-center justify-center flex-1 list-none max-[900px]:hidden ${menuOpen ? '!flex absolute left-1/2 -translate-x-1/2 top-[76px] w-[min(720px,calc(100vw-40px))] bg-[#ffffff]/92 border border-[#0f172a]/8 shadow-[0_14px_40px_rgba(0,0,0,0.10)] rounded-[18px] p-4 gap-[18px] justify-around' : ''}`}>
-          <li><a className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" href="#events" onClick={() => setMenuOpen(false)}>Events</a></li>
-          <li><a className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" href="#people" onClick={() => setMenuOpen(false)}>People</a></li>
-          <li><a className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" href="#about" onClick={() => setMenuOpen(false)}>About us</a></li>
-          <li><a className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" href="#blog" onClick={() => setMenuOpen(false)}>Blog</a></li>
+          <li><Link className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" to="/events" onClick={() => setMenuOpen(false)}>Events</Link></li>
+          <li><Link className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" to="/people" onClick={() => setMenuOpen(false)}>People</Link></li>
+          <li><Link className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" to="/#about" onClick={() => setMenuOpen(false)}>About us</Link></li>
+          <li><Link className="font-bold text-[0.95rem] text-[#1a1a1a] capitalize tracking-normal transition-colors duration-200 hover:text-[#00AEEF]" to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
         </ul>
 
         <div className="flex gap-[15px] items-center max-[900px]:hidden" aria-label="Social links">

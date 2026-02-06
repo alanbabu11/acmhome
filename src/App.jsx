@@ -1,23 +1,27 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HexagonGrid from './components/HexagonGrid'
-import AboutACM from './components/AboutACM'
-import EventHighlights from './components/EventHighlights'
-import UpcomingEvents from './components/UpcomingEvents'
 import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import GalleryPage from './pages/GalleryPage'
+import EventsPage from './pages/EventsPage'
+import PeoplePage from './pages/PeoplePage'
+import './App.css'
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <AboutACM />
-      <HexagonGrid key="hex-grid-final" />
-      <EventHighlights />
-      <UpcomingEvents />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/people" element={<PeoplePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
