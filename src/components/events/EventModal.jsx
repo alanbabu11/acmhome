@@ -133,7 +133,9 @@ const EventModal = ({ event, onClose, isLive = false }) => {
                             ) : (
                                 <>
                                     <img src={calendarIcon} alt="Date" width="16" height="16" className="opacity-70" />
-                                    <span className="text-[14px] font-medium">Ended on {event.date}</span>
+                                    <span className="text-[14px] font-medium">
+                                        {new Date(event.date) >= new Date("2026-02-12") ? 'Upcoming' : 'Ended'} on {event.date}
+                                    </span>
                                 </>
                             )}
                         </div>
